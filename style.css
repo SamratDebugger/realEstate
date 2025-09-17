@@ -18,6 +18,8 @@
 
 }
 
+/* hero */
+
 .hero {
     display: flex;
     flex-direction: ;
@@ -33,7 +35,6 @@
 
 
 .heroLeft p,
-
 .heroLeft h3 {
     color: #848484;
     font-size: 16px;
@@ -91,8 +92,35 @@
 
 }
 
+.service {
+    display: flex;
+    margin: auto;
+    background-color: #011640;
+    padding: 60px 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.service h1,
+.service p {
+    color: white;
+    text-wrap: balance;
+    text-align: center;
+    font-weight: 300;
+    line-height: 29px;
+}
+
+.service h1 {
+    line-height: 40px !important;
+}
+
+
+
 /* responsive */
 @media screen and (max-width:1405px) {
+
+    /* hero */
     .heroLeft h1 {
         font-size: 50px;
         line-height: 50px;
@@ -105,6 +133,8 @@
 }
 
 @media screen and (max-width:1024px) {
+
+    /* hero */
     .hero {
         flex-direction: column;
     }
@@ -118,7 +148,17 @@
     }
 }
 
+@media screen and (max-width:826px) {
+
+    /* service */
+    .service {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width:500px) {
+
+    /* hero */
     .hero {
         padding: 20px;
     }
@@ -138,4 +178,12 @@
     .search {
         margin-top: 15px;
     }
+}
+
+@media screen and (max-width:370px) {
+    .service h1 {
+        font-size: 25px;
+    }
+
+
 }
