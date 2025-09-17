@@ -98,9 +98,10 @@
     display: flex;
     margin: auto;
     background-color: #011640;
-    padding: 60px 80px;
-    justify-content: space-evenly;
+    padding: 60px 0px;
+    justify-content: space-around;
     align-items: center;
+    gap: 30px;
 
 
 }
@@ -110,6 +111,7 @@
     color: white;
     font-weight: 300;
     line-height: 29px;
+
 
 }
 
@@ -122,22 +124,88 @@
     max-width: 500px;
 }
 
-/* communities */
-.communities {
-    text-align: center;
-    text-wrap: balance;
+/* luxury*/
+.luxury {
     margin: auto;
     margin-top: 100px;
+    padding: 20px;
 }
 
+.communities {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.communities h3,
 .communities p {
-    max-width: 650px;
-    margin: auto;
+    color: #848484;
+    font-weight: 300;
+}
+
+.communities h1 {
+    color: #011640;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.homes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.homeCart {
+    position: relative;
+    border-radius: 15px;
+    overflow: clip;
+    height: 300px;
+
+}
+
+.homeCart img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+
+
+}
+
+.cartTitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.cartTitle button {
+    border: none;
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 18px;
+    display: none;
+
+}
+
+.homeCart:hover .cartTitle button {
+    display: block;
+}
+
+.holdingNumber {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 
 
 /* responsive */
+
+
 @media screen and (max-width:1405px) {
 
     /* hero */
@@ -151,6 +219,7 @@
         font-size: 14px;
     }
 }
+
 
 @media screen and (max-width:1024px) {
 
@@ -166,13 +235,28 @@
     .heroRight img {
         display: none;
     }
-}
-
-@media screen and (max-width:826px) {
 
     /* service */
     .service {
         flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    /* luxury */
+
+    .homes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+    /* luxury */
+
+    .homes {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -198,6 +282,16 @@
     .search {
         margin-top: 15px;
     }
+
+    /* service */
+    .service h1 {
+        font-size: 27px;
+    }
+
+    /* luxury */
+    .homeCart {
+        height: 250px;
+    }
 }
 
 @media screen and (max-width:370px) {
@@ -205,5 +299,8 @@
         font-size: 25px;
     }
 
-
+    /* luxury */
+    .homeCart {
+        height: 200px;
+    }
 }
